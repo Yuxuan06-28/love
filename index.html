@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Manrope',sans-serif;
+      background:#f5f2ee;
+      color:#2b1b14;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    /* NAVBAR */
+    nav{
+      width:100%;
+      height:80px;
+      background:#3b2317;
+      color:#fff;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:0 8%;
+      position:fixed;
+      top:0;
+      z-index:1000;
+    }
+
+    .logo{
+      font-size:1.8rem;
+      font-weight:700;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:40px;
+      font-size:1rem;
+    }
+
+    .nav-links a{
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      opacity:0.7;
+    }
+
+    /* HERO SECTION */
+    .hero{
+      min-height:100vh;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+      padding:120px 8% 60px;
+      gap:60px;
+    }
+
+    .left{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .title{
+      font-size:5rem;
+      line-height:0.95;
+      font-weight:600;
+      margin-bottom:40px;
+      letter-spacing:-3px;
+    }
+
+    .desc{
+      max-width:420px;
+      font-size:1rem;
+      line-height:1.8;
+      margin-bottom:50px;
+      color:#4b3b35;
+    }
+
+    .buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:16px 28px;
+      border:1px solid #2b1b14;
+      transition:0.3s;
+      font-size:0.95rem;
+    }
+
+    .btn:hover{
+      background:#2b1b14;
+      color:#fff;
+    }
+
+    /* RIGHT IMAGE */
+    .right{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .photo-card{
+      width:100%;
+      max-width:520px;
+      height:700px;
+      overflow:hidden;
+      border-radius:30px;
+      box-shadow:0 20px 60px rgba(0,0,0,0.18);
+      background:#ddd;
+    }
+
+    .photo-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    /* ABOUT */
+    .about{
+      padding:120px 8%;
+      background:#efe8e1;
+    }
+
+    .about h2{
+      font-size:2.5rem;
+      margin-bottom:25px;
+    }
+
+    .about p{
+      max-width:700px;
+      line-height:1.9;
+      color:#4b3b35;
+    }
+
+    /* FOOTER */
+    footer{
+      padding:40px 8%;
+      background:#3b2317;
+      color:#fff;
+      text-align:center;
+      font-size:0.9rem;
+    }
+
+    /* MOBILE */
+    @media(max-width:900px){
+
+      nav{
+        padding:0 5%;
+      }
+
+      .hero{
+        grid-template-columns:1fr;
+        padding:120px 5% 80px;
+      }
+
+      .title{
+        font-size:3.5rem;
+      }
+
+      .photo-card{
+        height:500px;
+      }
+
+      .nav-links{
+        gap:20px;
+        font-size:0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">My Portfolio</div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="work.pdf" target="_blank">Work</a>
+      <a href="mailto:your@email.com">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <!-- LEFT -->
+    <div class="left">
+
+      <h1 class="title">
+        Crafting <br>
+        Ideas & <br>
+        Design
+      </h1>
+
+      <p class="desc">
+        我是一位創作者 / 設計師 / 開發者。
+        喜歡簡約、溫暖且具有故事感的設計風格。
+      </p>
+
+      <div class="buttons">
+        <a class="btn" href="work.pdf" target="_blank">
+          VIEW MY WORK ↗
+        </a>
+
+        <a class="btn" href="#about">
+          ABOUT ME
+        </a>
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT -->
+    <div class="right">
+
+      <div class="photo-card">
+        <!-- 放你的照片 -->
+        <img src="me.jpg" alt="My Photo">
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+
+    <h2>About Me</h2>
+
+    <p>
+      這裡可以放你的自我介紹。
+      例如你的專長、經歷、設計理念、工作領域等等。
+      目前這個版型採用簡約咖啡色調與大量留白，
+      風格會接近你提供的參考網站。
+    </p>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 My Portfolio — All Rights Reserved
+  </footer>
+
+</body>
+</html>
